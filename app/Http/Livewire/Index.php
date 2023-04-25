@@ -38,7 +38,7 @@ class Index extends Component
             'location' => 'required',
             'rating' => 'required|numeric|min:0|max:10',
             'price' => 'required|numeric|min:0',
-            'image' => 'required|image|max:1024'
+            'image' => 'required|image|max:2048'
         ]);
 
         $path = $this->image->store('public/images');
@@ -65,7 +65,7 @@ class Index extends Component
             'image'
         ]);
 
-        return redirect('/')->with('message', 'Music added to playlist');
+        return redirect('/playlist')->with('message', 'Music added to playlist');
 
         compact('music');
     }
@@ -165,7 +165,7 @@ class Index extends Component
         ]);
 
         $this->reset();
-        return redirect('/')->with('message', 'Music updated successfully.');
+        return redirect('/playlist')->with('message', 'Music updated successfully.');
     }
 
     public function view($id)
@@ -198,7 +198,7 @@ class Index extends Component
     {
         MusicBar::find($this->musicDelete)->delete();
 
-        return redirect('/')->with('message', 'Music is deleted successfully');
+        return redirect('/playlist')->with('message', 'Music is deleted successfully');
     }
     public function render()
     {

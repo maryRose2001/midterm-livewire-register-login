@@ -26,6 +26,8 @@ class Login extends Component
 
         if(Auth::attempt($loginUser)) {
             return redirect()->intended('/home');
+        } else {
+            return redirect('/')->with('error', 'Invalid credentials');
         }
     }
     public function render()

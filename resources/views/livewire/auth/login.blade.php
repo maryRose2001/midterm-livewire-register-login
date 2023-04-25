@@ -41,7 +41,7 @@
                             <div class="flex-grow-1">
                                 <p href="/register">Don't have an account? <a href="/register">Register</a></p>
                             </div>
-                            <button type="submit" class="mt-3 btn btn-primary">Login</button>
+                            <button type="submit" class="mt-3 btn btn-warning">Login</button>
                         </div>
                     </form>
                 </div>
